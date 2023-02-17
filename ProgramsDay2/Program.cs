@@ -10,7 +10,8 @@ namespace RefresherPrograms
             while(t) { 
                 Console.WriteLine("Choose Program \n1.Factorial \n2.Print 1 to 100 \n3.Find roots of quadratic equation" +
                     " \n4.Number to String \n5.Check String \n6.Average of Array \n7.Prime Number in integer array \n8.Shift zeros to end of array " +
-                    "\n9.First repeated element in array \n10.Arithmetic expression \n11.Longest substring without repeating characters \n12.Exit");
+                    "\n9.First repeated element in array \n10.Arithmetic expression \n11.Longest substring without repeating characters \n12.Delete an element " +
+                    "at desired position \n13.Second largest element in array \n14.Remove all duplicates \n15.Smallest gap between array elements \n16.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -95,6 +96,22 @@ namespace RefresherPrograms
                         ls.longestsubstr(s);
                         break;
                     case 12:
+                        DeleteArrayElement de = new DeleteArrayElement();
+                        de.deletefromarray();
+                        break;
+                    case 13:
+                        SecondLargestElement sl = new SecondLargestElement();
+                        sl.secondlargest();
+                        break;
+                    case 14:
+                        RemoveDuplicates rd = new RemoveDuplicates();
+                        rd.removedup();
+                        break;
+                    case 15:
+                        SmallestGap sg = new SmallestGap();
+                        sg.smallestgap();
+                        break;
+                    case 16:
                         t = false;
                         break;
                             
