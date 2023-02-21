@@ -55,6 +55,13 @@ namespace FunctionalPrograms
                         int c = Convert.ToInt32(Console.ReadLine());
                         qr.findroots(a, b, c);
                         break;
+                    case 5:
+                        WindChill wc = new WindChill();
+                        Console.WriteLine("Enter temperature(less than 50) and wind speed (less than 120): ");
+                        double temp = Convert.ToDouble(Console.ReadLine());
+                        double speed = Convert.ToDouble(Console.ReadLine());
+                        wc.windchill(temp, speed);
+                        break;
                     case 6:
                         t = false;
                         break;
