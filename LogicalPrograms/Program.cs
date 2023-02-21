@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace LogicalPrograms
 {
@@ -23,6 +24,16 @@ namespace LogicalPrograms
                         Console.WriteLine("Enter the no. of times");
                         int times = Convert.ToInt32(Console.ReadLine());
                         gambler.gamble(stake, goal, times);
+                        break;
+                    case 2:
+                        CouponNumber co = new CouponNumber();
+                        Console.WriteLine("Enter Coupon numbers");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        co.coupons(n);
+                        break;
+                    case 3:
+                        SimulatedStopwatch sw = new SimulatedStopwatch();
+                        sw.watch();
                         break;
                 }
             }
