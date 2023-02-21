@@ -36,6 +36,13 @@ namespace FunctionalPrograms
                         }
 
                         break;
+                    case 2:
+                        SumofIntegers si = new SumofIntegers();
+                        si.integersumzero();
+                        break;
+                    case 6:
+                        t = false;
+                        break;
                 }
             }
         }
