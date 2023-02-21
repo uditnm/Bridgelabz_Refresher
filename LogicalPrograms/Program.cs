@@ -35,6 +35,13 @@ namespace LogicalPrograms
                         SimulatedStopwatch sw = new SimulatedStopwatch();
                         sw.watch();
                         break;
+                    case 4:
+                        TicTacToe ttt = new TicTacToe();
+                        ttt.play();
+                        break;
+                    case 5:
+                        t = false;
+                        break;
                 }
             }
         }
