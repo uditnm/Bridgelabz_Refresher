@@ -11,9 +11,9 @@ namespace FunctionalPrograms
             {
                 Console.WriteLine("1.2D Array \n2.Sum of three integers adds to zero \n3.Euclidean Distance " +
                     "\n4.Quadratic roots \n5.WindChill \n6.Exit");
-                int ch = Convert.ToInt32(Console.ReadLine());
+                int choice = Convert.ToInt32(Console.ReadLine());
 
-                switch (ch)
+                switch (choice)
                 {
                     case 1:
                         Array2D array2d = new Array2D();
@@ -21,8 +21,8 @@ namespace FunctionalPrograms
                         int m = Convert.ToInt32(Console.ReadLine());
                         int n = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("1.Integer array \n2.Double array \n3.boolean array");
-                        int c = Convert.ToInt32(Console.ReadLine());
-                        switch (c)
+                        int ch = Convert.ToInt32(Console.ReadLine());
+                        switch (ch)
                         {
                             case 1:
                                 array2d.readintarray(m, n);
@@ -46,6 +46,14 @@ namespace FunctionalPrograms
                         int x = Convert.ToInt32(Console.ReadLine());
                         int y = Convert.ToInt32(Console.ReadLine());
                         distance.euclideandistance(x, y);
+                        break;
+                    case 4:
+                        QuadraticRoots qr = new QuadraticRoots();
+                        Console.WriteLine("Enter a,b and c: ");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        qr.findroots(a, b, c);
                         break;
                     case 6:
                         t = false;
