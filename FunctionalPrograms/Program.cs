@@ -40,6 +40,13 @@ namespace FunctionalPrograms
                         SumofIntegers si = new SumofIntegers();
                         si.integersumzero();
                         break;
+                    case 3:
+                        Distance distance = new Distance();
+                        Console.WriteLine("Enter x and y:");
+                        int x = Convert.ToInt32(Console.ReadLine());
+                        int y = Convert.ToInt32(Console.ReadLine());
+                        distance.euclideandistance(x, y);
+                        break;
                     case 6:
                         t = false;
                         break;
