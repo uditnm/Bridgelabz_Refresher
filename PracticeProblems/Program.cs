@@ -9,7 +9,7 @@ namespace PracticeProblems
             bool t = true;
             while (t)
             {
-                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Exit");
+                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Customize message \n4.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -57,6 +57,10 @@ namespace PracticeProblems
                         
                         break;
                     case 3:
+                        CustomizeMessage cm = new CustomizeMessage();
+                        cm.customize();
+                        break;
+                    case 4:
                         t = false;
                         break;
                 }
