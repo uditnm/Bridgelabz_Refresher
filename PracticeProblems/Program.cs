@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace PracticeProblems
 {
@@ -9,7 +10,7 @@ namespace PracticeProblems
             bool t = true;
             while (t)
             {
-                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Customize message \n4.Exit");
+                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Customize message \n4.Unordered list \n5.Balanced parantheses \n6.Cash Counter \n7.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -61,6 +62,20 @@ namespace PracticeProblems
                         cm.customize();
                         break;
                     case 4:
+                        SplitWords sw = new SplitWords();
+                        sw.split();
+                        break;
+                    case 5:
+                        BalancedParantheses bp = new BalancedParantheses();
+                        Console.WriteLine("Enter the expression");
+                        string exp = Console.ReadLine();
+                        Console.WriteLine("The expression {0} balanced", bp.balance(exp) ? "is" : "is not");
+                        break;
+                    case 6:
+                        CashCounter cc = new CashCounter();
+                        cc.balance();
+                        break;
+                    case 7:
                         t = false;
                         break;
                 }
