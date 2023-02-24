@@ -10,7 +10,7 @@ namespace PracticeProblems
             bool t = true;
             while (t)
             {
-                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Customize message \n4.Unordered list \n5.Balanced parantheses \n6.Cash Counter \n7.Exit");
+                Console.WriteLine("1.Swap nibbles \n2.Generic BubbleSort \n3.Customize message \n4.Unordered list \n5.Balanced parantheses \n6.Cash Counter \n7.Inventory \n8.Stock Account Management \n9.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -76,6 +76,21 @@ namespace PracticeProblems
                         cc.balance();
                         break;
                     case 7:
+                        JSONInventory inventory = new JSONInventory();
+                        inventory.inventory();
+                        break;
+                    case 8:
+                        Console.WriteLine("Enter stock name:");
+                        string stock = Console.ReadLine();
+                        Console.WriteLine("Enter no. of shares: ");
+                        int shares = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter share prices: ");
+                        int price = Convert.ToInt32(Console.ReadLine());
+
+                        Stock s = new Stock(stock,shares,price);
+                        s.stockvalue();
+                        break;
+                    case 9:
                         t = false;
                         break;
                 }
