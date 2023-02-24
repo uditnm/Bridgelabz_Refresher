@@ -1,0 +1,33 @@
+{
+  "rice": [
+    {
+      "name": "basmati",
+      "weight": 20,
+      "price per kg": 90
+    }
+  ],
+  "wheats": [
+    {
+      "name": "sharbati",
+      "weight": 25,
+      "price per kg": 60
+    },
+    {
+      "name": "atta",
+      "weight": 56,
+      "price per kg": 75
+    }
+  ],
+  "pulses": [
+    {
+      "name": "dal",
+      "weight": 80,
+      "price per kg": 50
+    },
+    {
+      "name": "Moong Dal",
+      "weight": 35,
+      "price per kg": 88
+    }
+  ]
+}
