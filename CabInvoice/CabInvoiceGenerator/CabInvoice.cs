@@ -10,11 +10,12 @@ namespace CabInvoiceGenerator
     {
   
         private List<float> invoices = new List<float>();
+        private Dictionary<int, (float, float)> invoicesrepo = new Dictionary<int, (float, float)>();
         float totalfare = 0;
 
         public float CalculateFare(List<(float, float)> rides)
         {
-
+            int i = 1;
             foreach (var ride in rides)
             {
                 float fare = ride.Item1 * 10 + ride.Item2;
@@ -26,6 +27,8 @@ namespace CabInvoiceGenerator
                 {
                     invoices.Add(5);
                 }
+                invoicesrepo.Add(i, ride);
+                i++;
 
             }
             
@@ -46,6 +49,11 @@ namespace CabInvoiceGenerator
         public float AverageFare()
         {
             return totalfare/ invoices.Count();
+        }
+
+        public (float,float) RetrieveRides(int id)
+        {
+            return invoicesrepo[id];
         }
     }
 }
