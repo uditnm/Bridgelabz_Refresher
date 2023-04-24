@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href = "css/style.css"/>
+    <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+</head>
+<body>
+    <div class = "logo">
+        <img src="Screenshot 2023-04-22 114636.png" id="Image" >
+        <h3>EMPLOYEE<br>PAYROLL</h3>
+    </div>
+    <div class = "form">
+        <h3>Employee Payroll Form</h3>
+        <form action = "PayrollForm.html" id="employeeform">
+            <div class = "row">
+                <div class="col-25">
+                    <label for = "name">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="name" name="name"/>
+                </div>
+            </div>   
+            <div class = "row">
+                
+                <p class="profile">Profile Image</p>
+                <input type="radio" id="emp1" name="dp">
+                <label for="emp1"><img src="images\emp1.jpg"/></label><br>
+                <input type="radio" id="emp2" name="dp">
+                <label for="emp2"><img src="images\emp2.jpg"/></label><br>
+                <input type="radio" id="emp3" name="dp">
+                <label for="emp3"><img src="images\emp3.jpg"/></label>    
+                
+            </div>
+            <div class = "row">
+                <p class="gender">Gender</p>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female ">Female</label><br>  
+            </div>
+            <div class="row">
+                <p class="dept">Department</p>
+                <input type="checkbox" id="dept1" name="dept1" value="HR">
+                <label for="dept1"> HR</label><br>
+                <input type="checkbox" id="dept2" name="dept2" value="Sales">
+                <label for="dept2"> Sales</label><br>
+                <input type="checkbox" id="dept3" name="dept3" value="Finance">
+                <label for="dept3"> Finance</label>
+                <input type="checkbox" id="dept4" name="dept4" value="Engineer">
+                <label for="dept4"> Engineer</label>
+                <input type="checkbox" id="dept5" name="dept5" value="Others">
+                <label for="dept5"> Others</label>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="salary">Salary</label>
+                </div>
+                <div class="col-75">
+                  <select id="salary" name="salary">
+                    <option value="select salary">select salary</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="startdate">Start Date</label>
+                </div>
+                <div class="col-75">
+                  <select id="day" name="Day">
+                    <option value="Day">Day</option>
+                  </select>
+                  <select id="month" name="Month">
+                    <option value="Month">Month</option>
+                  </select>
+                  <select id="year" name="Year">
+                    <option value="Year">Year</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                  <label for="notes">Notes</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="notes" name="notes" style="height:200px"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class = "buttons">
+                <button>Cancel</button>
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+              
+        </form>
+    </div>
+    <script src="javascript/script.js"></script>
+</body>
+</html>

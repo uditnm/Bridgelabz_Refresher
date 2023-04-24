@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240,240,240);
+
+}
+
+.logo{
+    padding-left: 120px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+    background-color: white;
+}
+
+#Image{
+    height: 50px;
+    width: 50px;
+    margin-right: 20px;
+}
+
+.table{
+    margin-top: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240,240,240);
+}
+
+.table_header p{
+    color: black;
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+td button{
+    background-color: white;
+}
+
+.search{
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.add_user{
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(127, 196, 24);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+  
+.table_section{
+    height: 500px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout:auto;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: rgb(70, 69, 69);
+    color: white;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+th,td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: white;
+    font-size: 14px;
+
+}
+
+.name{
+    width:max-content;
+    display: flex;
+}
+  
+td img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dept{
+    display: flex;
+}
+
+.dept p{
+    height: fit-content;
+    width: fit-content;
+    background: #E9FEA5;
+    border-radius: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font: normal 11px;
+}
+
+tr:hover td{
+    cursor: pointer;
+}
+
+
+
+.form {
+    padding: 20px;
+    margin-top: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-color: white;
+}
+  
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+  
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row{
+    display: flex;
+    margin: 15px;
+    gap: 15px;
+}
+
+
+.row img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#notes, #name{
+    width: inherit;
+}
+
+span{
+    padding-top: 16px;
+    padding-left: 16px;
+}
+
+.profile{
+    padding-right: 165px;
+}
+
+.gender{
+    padding-right: 206px;
+}
+
+.dept{
+    padding-right: 176px;
+}
+
+.form h3{
+    padding-left: 16px;
+    padding-bottom: 25px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
