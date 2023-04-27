@@ -25,25 +25,51 @@ let employeeform = document.getElementById("employeeform");
 employeeform.addEventListener("submit", (e) => {
     e.preventDefault();
 
-var form = new FormData(employeeform);
-var username = form.get("name");
-console.log(username);
-var profile = form.get("dp");
-console.log(profile);
-var gender = form.get("gender");
-console.log(gender);
-var dept = form.getAll("dept");
-console.log(dept);
-var salary = form.get("salary");
-console.log(salary);
-var day = form.get("Day");
-console.log(day);
-var month = form.get("Month");
-console.log(month);
-var year = form.get("Year");
-console.log(year);
-var notes = form.get("notes");
-console.log(notes);
+    const formdata = {}
 
+    var form = new FormData(employeeform);
+
+    var username = form.get("name");
+    console.log(username);
+    formdata["name"] = username;
+    var profile = form.get("dp");
+    console.log(profile);
+    formdata["dp"] = profile;
+    var gender = form.get("gender");
+    console.log(gender);
+    formdata["gender"] = gender;
+    var dept = form.getAll("dept");
+    console.log(dept);
+    formdata["dept"] = dept;
+    var salary = form.get("salary");
+    console.log(salary);
+    formdata["salary"] = salary;
+    var day = form.get("Day");
+    console.log(day);
+    formdata["Day"] = day;
+    var month = form.get("Month");
+    formdata["Month"] = month;
+    console.log(month);
+    var year = form.get("Year");
+    console.log(year);
+    formdata["Year"] = year;
+    var notes = form.get("notes");
+    console.log(notes);
+    formdata["notes"] = notes;
+
+    const formdataJSON = JSON.stringify(formdata);
+    console.log(formdataJSON);
+
+    fetch('http://localhost:3000/employees', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: formdataJSON
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
 
 });
+

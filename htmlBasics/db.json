@@ -1,0 +1,63 @@
+{
+  "employees": [
+    {
+      "name": "stacy",
+      "dp": "images\\emp3.jpg",
+      "gender": "female",
+      "dept": [
+        "Sales",
+        "Finance"
+      ],
+      "salary": "50000",
+      "Day": "19",
+      "Month": "Jan",
+      "Year": "2002",
+      "notes": "This is stacy",
+      "id": 1
+    },
+    {
+      "name": "Jack",
+      "dp": "images\\\\emp1.jpg",
+      "gender": "male",
+      "dept": [
+        "Engineer",
+        "Others"
+      ],
+      "salary": "200000",
+      "Day": "10",
+      "Month": "Jan",
+      "Year": "2019",
+      "notes": "I am Jack",
+      "id": 4
+    },
+    {
+      "name": "Karen",
+      "dp": "images\\\\emp3.jpg",
+      "gender": "female",
+      "dept": [
+        "Sales"
+      ],
+      "salary": "150000",
+      "Day": "14",
+      "Month": "Jan",
+      "Year": "2015",
+      "notes": "I am Karen",
+      "id": 5
+    },
+    {
+      "name": "Daisy",
+      "dp": "images\\\\emp2.jpg",
+      "gender": "female",
+      "dept": [
+        "HR",
+        "Others"
+      ],
+      "salary": "100000",
+      "Day": "14",
+      "Month": "Jan",
+      "Year": "2012",
+      "notes": "I am Daisy",
+      "id": 6
+    }
+  ]
+}

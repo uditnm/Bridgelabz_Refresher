@@ -86,12 +86,14 @@ table{
 thead th{
     position: sticky;
     top: 0;
-    background-color: rgb(70, 69, 69);
+    background-color: #42515F;
     color: white;
     font-size: 15px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
+
+
 
 th,td{
     border-bottom: 1px solid #dddddd;
@@ -116,6 +118,7 @@ td img {
 
 .dept{
     display: flex;
+    justify-content: center;
 }
 
 .dept p{
@@ -187,7 +190,7 @@ span{
     padding-right: 206px;
 }
 
-.dept{
+.department{
     padding-right: 176px;
 }
 

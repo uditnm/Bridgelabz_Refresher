@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Payroll Form</title>
     <link rel="stylesheet" href = "css/style.css"/>
     <link rel="stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     
@@ -25,11 +25,11 @@
             <div class = "row">
                 
                 <p class="profile">Profile Image</p>
-                <input type="radio" id="emp1" name="dp">
+                <input type="radio" id="emp1" name="dp" value="images\\emp1.jpg">
                 <label for="emp1"><img src="images\emp1.jpg"/></label><br>
-                <input type="radio" id="emp2" name="dp">
+                <input type="radio" id="emp2" name="dp" value="images\\emp2.jpg">
                 <label for="emp2"><img src="images\emp2.jpg"/></label><br>
-                <input type="radio" id="emp3" name="dp">
+                <input type="radio" id="emp3" name="dp" value = "images\\emp3.jpg">
                 <label for="emp3"><img src="images\emp3.jpg"/></label>    
                 
             </div>
@@ -41,16 +41,16 @@
                 <label for="female ">Female</label><br>  
             </div>
             <div class="row">
-                <p class="dept">Department</p>
-                <input type="checkbox" id="dept1" name="dept1" value="HR">
+                <p class="department">Department</p>
+                <input type="checkbox" id="dept1" name="dept" value="HR">
                 <label for="dept1"> HR</label><br>
-                <input type="checkbox" id="dept2" name="dept2" value="Sales">
+                <input type="checkbox" id="dept2" name="dept" value="Sales">
                 <label for="dept2"> Sales</label><br>
-                <input type="checkbox" id="dept3" name="dept3" value="Finance">
+                <input type="checkbox" id="dept3" name="dept" value="Finance">
                 <label for="dept3"> Finance</label>
-                <input type="checkbox" id="dept4" name="dept4" value="Engineer">
+                <input type="checkbox" id="dept4" name="dept" value="Engineer">
                 <label for="dept4"> Engineer</label>
-                <input type="checkbox" id="dept5" name="dept5" value="Others">
+                <input type="checkbox" id="dept5" name="dept" value="Others">
                 <label for="dept5"> Others</label>
             </div>
             <div class="row">
@@ -59,7 +59,10 @@
                 </div>
                 <div class="col-75">
                   <select id="salary" name="salary">
-                    <option value="select salary">select salary</option>
+                    <option value=50000>50000</option>
+                    <option value=100000>100000</option>
+                    <option value=150000>150000</option>
+                    <option value=200000>200000</option>
                   </select>
                 </div>
             </div>
@@ -69,13 +72,26 @@
                 </div>
                 <div class="col-75">
                   <select id="day" name="Day">
-                    <option value="Day">Day</option>
+                    <option disabled selected value="Day">Day</option>
+
                   </select>
                   <select id="month" name="Month">
-                    <option value="Month">Month</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                    <option value="Apr">Apr</option>
+                    <option value="May">May</option>
+                    <option value="Jun">Jun</option>
+                    <option value="Jul">Jul</option>
+                    <option value="Aug">Aug</option>
+                    <option value="Sept">Sept</option>
+                    <option value="Oct">Oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                    
                   </select>
                   <select id="year" name="Year">
-                    <option value="Year">Year</option>
+                    <option disabled selected value="Year">Year</option>
                   </select>
                 </div>
             </div>
