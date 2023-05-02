@@ -45,18 +45,17 @@
       "id": 5
     },
     {
-      "name": "Daisy",
-      "dp": "images\\\\emp2.jpg",
-      "gender": "female",
+      "name": "Karan",
+      "dp": "images\\\\emp1.jpg",
+      "gender": "male",
       "dept": [
-        "HR",
-        "Others"
+        "Sales"
       ],
-      "salary": "100000",
-      "Day": "14",
+      "salary": "50000",
+      "Day": "17",
       "Month": "Jan",
-      "Year": "2012",
-      "notes": "I am Daisy",
+      "Year": "2014",
+      "notes": "Karan",
       "id": 6
     }
   ]

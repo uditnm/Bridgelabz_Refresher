@@ -1,27 +1,37 @@
-let year = document.getElementById("year")
-let lastyear = new Date().getFullYear();
-let curYear = 2000;
-while(curYear<lastyear){
-    let dateOption = document.createElement("option");
-    dateOption.text = curYear;
-    dateOption.value = curYear;
-    year.add(dateOption);
-    curYear+=1;
+function datePick(){
+    let year = document.getElementById("year")
+    let lastyear = new Date().getFullYear();
+    let curYear = 2000;
+    while(curYear<lastyear){
+        let dateOption = document.createElement("option");
+        dateOption.text = curYear;
+        dateOption.value = curYear;
+        year.add(dateOption);
+        curYear+=1;
+    }
+
+    let day = document.getElementById("day");
+    let curDay = 1;
+    while(curDay<=31){
+        let dayOption = document.createElement("option");
+        dayOption.text = curDay;
+        dayOption.value = curDay;
+        day.add(dayOption);
+        curDay+=1;
+    }
 }
 
-let day = document.getElementById("day");
-let curDay = 1;
-while(curDay<=31){
-    let dayOption = document.createElement("option");
-    dayOption.text = curDay;
-    dayOption.value = curDay;
-    day.add(dayOption);
-    curDay+=1;
+var employeeId = null;
+var params = new URLSearchParams(window.location.search);
+if (params.has("id")){
+  employeeId = params.get("id");
 }
+
+console.log(employeeId);
 
 
 let employeeform = document.getElementById("employeeform");
-
+if(employeeform){
 employeeform.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -60,6 +70,7 @@ employeeform.addEventListener("submit", (e) => {
     const formdataJSON = JSON.stringify(formdata);
     console.log(formdataJSON);
 
+    /*
     fetch('http://localhost:3000/employees', {
       method: 'POST',
       headers: {
@@ -70,6 +81,39 @@ employeeform.addEventListener("submit", (e) => {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error(error));
+    */
+    console.log(employeeId);
 
+    if(employeeId!=null) {
+              fetch('http://localhost:3000/employees/'+employeeId, {
+                  method: 'PUT',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: formdataJSON
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error));
+  
+                employeeId = null;
+          } else {
+              fetch('http://localhost:3000/employees', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: formdataJSON
+                })
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error));
+          }
 });
+  
+}
 
+
+function redirectToHome(){
+  window.location.href = "file:///D:/bridgelabz/Bridgelabz_Refresher/htmlBasics/Payroll.html";
+}
